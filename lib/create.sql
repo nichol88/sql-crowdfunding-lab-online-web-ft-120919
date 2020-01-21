@@ -4,5 +4,18 @@ CREATE TABLE projects (
   category TEXT,
   funding_goal TEXT,
   start_date TEXT,
-  end_date TEXT,
+  end_date TEXT
+);
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  age INTEGER
+);
+
+CREATE TABLE pledges (
+  id INTEGER PRIMARY KEY,
+  amount REAL,
+  user_id INTEGER FOREIGN KEY,
+  project_id INTEGER FOREIGN KEY
 );
